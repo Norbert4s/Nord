@@ -9,18 +9,17 @@ import {
   SERVERS_ERROR_MESSAGE,
 } from "../../../config/constants";
 
-const mockStore = configureStore([]);
-
 describe("ErrorPage", () => {
   test("renders", () => {
     const serversData = [
       { name: "United States #50", distance: 843 },
       { name: "Latvia #44", distance: 1176 },
     ];
-
     const initialState = {
       servers: { data: serversData, error: null, loading: false },
+      auth: { token: "123abc" },
     };
+    const mockStore = configureStore([]);
     const store = mockStore(initialState);
 
     const onSubmit = jest.fn();

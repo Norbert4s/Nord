@@ -1,15 +1,12 @@
 .login {
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
 .login__form {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background-color: $color-white;
   padding: 32px;
   border-radius: 12px;
@@ -30,4 +27,5 @@
   grid-column-start: 1;
   align-self: center;
   color: $color-error;
+  font-weight: $font-normal-weight;
 }

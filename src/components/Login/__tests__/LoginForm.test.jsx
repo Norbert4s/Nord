@@ -6,7 +6,7 @@ import LoginForm from "../LoginForm";
 
 const mockStore = configureStore([]);
 
-describe("FormTextField", () => {
+describe("LoginForm", () => {
   test("renders with children elements", () => {
     const initialState = { auth: { loading: false, error: null } };
     const store = mockStore(initialState);

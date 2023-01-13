@@ -2,9 +2,9 @@
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/tooltip";
-@import "./base";
 @import "./utils/mixins";
 @import "./utils/variables";
+@import "./base";
 @import "./components/login";
 @import "./components/form-field";
 @import "./components/login-button";

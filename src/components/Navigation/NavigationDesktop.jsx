@@ -8,6 +8,7 @@ import {
   LOGOUT_NAVIGATION_LABEL,
   SERVERS_NAVIGATION_LABEL,
 } from "../../config/constants";
+import TesoLogo from "../../assets/TesoServers.svg";
 
 function NavigationDesktop() {
   const dispatch = useDispatch();
@@ -16,7 +17,9 @@ function NavigationDesktop() {
   return (
     <div className="navigation">
       <div className="navigation__items">
-        <div className="navigation__logo">TesoTask</div>
+        <div className="navigation__logo">
+          <TesoLogo />
+        </div>
         <div className="navigation__items__links">
           <Link to="/">{MAIN_PAGE_NAVIGATION_LABEL}</Link>
           {loggedIn ? (

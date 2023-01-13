@@ -9,6 +9,7 @@ import {
   LOGOUT_NAVIGATION_LABEL,
   SERVERS_NAVIGATION_LABEL,
 } from "../../config/constants";
+import TesoLogo from "../../assets/TesoServers.svg";
 
 function NavigationMobile() {
   const loggedIn = useSelector((state) => state.auth.token);
@@ -28,7 +29,9 @@ function NavigationMobile() {
           className="navigation--mobile__burger"
         />
         <div className="navigation--mobile__items">
-          <div className="navigation--mobile__logo">TesoTask</div>
+          <div className="navigation--mobile__logo">
+            <TesoLogo />
+          </div>
           {show && (
             <div className="navigation--mobile__items__links">
               <Link to="/" onClick={toggleNavigation}>

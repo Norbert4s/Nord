@@ -1,20 +1,16 @@
 .field {
-  position: relative;
   margin-bottom: 16px;
 
   .field__label {
     margin-bottom: 8px;
-    font-weight: $font-medium-weight;
     color: $color-dark-gray;
   }
 
   .field__input {
     font-weight: $font-medium-weight;
     font-size: $font-size;
-    filter: none;
     padding: 0;
     border-radius: 5px;
-    outline: none;
     border: none;
     font-family: inherit;
     height: $form-item-height;

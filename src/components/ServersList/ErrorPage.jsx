@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import retrieveToken from "../../utils/retrieveToken";
 import getServers from "../../redux/actions/serversActions";
 import {
   LOADING_MESSAGE,
@@ -10,9 +9,9 @@ import {
 } from "../../config/constants";
 
 function ErrorPage() {
-  const authToken = retrieveToken();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const authToken = useSelector((state) => state.auth.token);
   const servers = useSelector((state) => state.servers.data);
   const loading = useSelector((state) => state.servers.loading);
   const error = useSelector((state) => state.servers.error);

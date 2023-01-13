@@ -20,12 +20,12 @@ function Login() {
     }
   }, [loggedIn]);
 
-  // eslint-disable-next-line arrow-body-style
-  useEffect(() => {
-    return () => {
+  useEffect(
+    () => () => {
       dispatch(clearErrors());
-    };
-  }, []);
+    },
+    []
+  );
 
   return (
     <div className="login">
