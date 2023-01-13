@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useRef, memo } from "react";
+import React, { useRef } from "react";
 import { Overlay, Tooltip } from "react-bootstrap";
 import PropTypes from "prop-types";
 
@@ -41,4 +41,4 @@ FormTextField.propTypes = {
   }).isRequired,
 };
 
-export default memo(FormTextField);
+export default FormTextField;

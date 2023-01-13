@@ -3,21 +3,16 @@ import configureStore from "redux-mock-store";
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
-import ErrorPage from "../ErrorPage";
+import Navigation from "../Navigation";
 import {
-  TRY_AGAIN_MESSAGE,
-  SERVERS_ERROR_MESSAGE,
+  MAIN_PAGE_NAVIGATION_LABEL,
+  LOGIN_NAVIGATION_LABEL,
 } from "../../../config/constants";
 
-describe("ErrorPage", () => {
+describe("Navigation", () => {
   test("renders", () => {
-    const serversData = [
-      { name: "United States #50", distance: 843 },
-      { name: "Latvia #44", distance: 1176 },
-    ];
     const initialState = {
-      servers: { data: serversData, error: null, loading: false },
-      auth: { token: "123abc" },
+      auth: { token: null },
     };
     const mockStore = configureStore([]);
     const store = mockStore(initialState);
@@ -25,12 +20,12 @@ describe("ErrorPage", () => {
     render(
       <Router>
         <Provider store={store}>
-          <ErrorPage />
+          <Navigation />
         </Provider>
       </Router>
     );
 
-    expect(screen.getByText(TRY_AGAIN_MESSAGE)).toBeInTheDocument();
-    expect(screen.getByText(SERVERS_ERROR_MESSAGE)).toBeInTheDocument();
+    expect(screen.getByText(LOGIN_NAVIGATION_LABEL)).toBeInTheDocument();
+    expect(screen.getByText(MAIN_PAGE_NAVIGATION_LABEL)).toBeInTheDocument();
   });
 });

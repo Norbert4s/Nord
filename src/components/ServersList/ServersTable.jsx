@@ -1,6 +1,6 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useMemo, memo } from "react";
+import React, { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { useTable, useSortBy } from "react-table";
 import createServersColumns from "../../utils/createServersColumns";
@@ -34,12 +34,24 @@ function ServersTable() {
                     {column.render("Header")}
                     {column.isSorted ? (
                       column.isSortedDesc ? (
-                        <SortDescIcon className="servers__sort-icon" />
+                        <img
+                          alt=""
+                          src={SortDescIcon}
+                          className="servers__sort-icon"
+                        />
                       ) : (
-                        <SortAscIcon className="servers__sort-icon" />
+                        <img
+                          alt=""
+                          src={SortAscIcon}
+                          className="servers__sort-icon"
+                        />
                       )
                     ) : (
-                      <SortDefaultIcon className="servers__sort-icon" />
+                      <img
+                        alt=""
+                        src={SortDefaultIcon}
+                        className="servers__sort-icon"
+                      />
                     )}
                   </div>
                 </th>
@@ -64,4 +76,4 @@ function ServersTable() {
   );
 }
 
-export default memo(ServersTable);
+export default ServersTable;

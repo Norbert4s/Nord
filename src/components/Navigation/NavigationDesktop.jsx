@@ -17,9 +17,7 @@ function NavigationDesktop() {
   return (
     <div className="navigation">
       <div className="navigation__items">
-        <div className="navigation__logo">
-          <TesoLogo />
-        </div>
+        <img src={TesoLogo} alt="" className="navigation__logo" />
         <div className="navigation__items__links">
           <Link to="/">{MAIN_PAGE_NAVIGATION_LABEL}</Link>
           {loggedIn ? (

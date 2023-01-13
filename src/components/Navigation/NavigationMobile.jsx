@@ -24,13 +24,16 @@ function NavigationMobile() {
       } navigation--mobile-wrapper`}
     >
       <div className="navigation--mobile">
-        <Burger
+        <input
+          type="image"
           onClick={toggleNavigation}
+          alt=""
+          src={Burger}
           className="navigation--mobile__burger"
         />
         <div className="navigation--mobile__items">
           <div className="navigation--mobile__logo">
-            <TesoLogo />
+            <img alt="" src={TesoLogo} />
           </div>
           {show && (
             <div className="navigation--mobile__items__links">
