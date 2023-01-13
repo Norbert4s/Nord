@@ -1,0 +1,12 @@
+.error {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+  font-weight: $font-medium-weight;
+
+  .error__message {
+    margin-top: 10px;
+    font-weight: $font-normal-weight;
+  }
+}

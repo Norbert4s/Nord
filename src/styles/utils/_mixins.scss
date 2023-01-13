@@ -1,0 +1,28 @@
+@mixin button-shared-styles() {
+  font-family: inherit;
+  font-size: 16px;
+  border: none;
+  color: $color-white;
+  height: 52px;
+  width: 98px;
+  border-radius: 50px;
+  font-weight: 500;
+  background-color: $color-purple;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-purple;
+  }
+}
+
+@mixin logo-shared-styles() {
+  font-size: 22px;
+  font-weight: $font-medium-weight;
+  color: white;
+}
+
+@mixin navigation-items-shared-styles() {
+  color: $color-white;
+  text-decoration: none;
+  font-weight: $font-medium-weight;
+}

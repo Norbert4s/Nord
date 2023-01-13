@@ -1,0 +1,33 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login__form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $color-white;
+  padding: 32px;
+  border-radius: 12px;
+}
+
+.login__submit {
+  width: $form-item-width;
+  display: grid;
+  margin-top: 15px;
+  grid-template-columns: 1fr repeat(3, auto) 1fr;
+
+  @media screen and (max-width: $breakpoint-small) {
+    width: $form-item-width-sm;
+  }
+}
+
+.login__error {
+  grid-column-start: 1;
+  align-self: center;
+  color: $color-error;
+}

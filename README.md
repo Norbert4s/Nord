@@ -1,0 +1,4 @@
+- `npm i` install packages
+- `npm run start` start development mode
+- `npm run build` create production build
+- `npm run test` run tests
